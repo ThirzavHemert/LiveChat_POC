@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                Toast.makeText(this,"Clicked",Toast.LENGTH_SHORT);
                 Intent myIntent = new Intent(MainActivity.this, ChatRoomActivity.class);
+//                myIntent.putExtra("key", username); //Optional parameters
                 MainActivity.this.startActivity(myIntent);
             }
         });

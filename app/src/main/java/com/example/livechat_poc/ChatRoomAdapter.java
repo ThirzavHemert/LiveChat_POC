@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChatRoomAdapter extends RecyclerView.Adapter<ChatRoomAdapter.ViewHolder> {
+    private static String TAG = ChatRoomAdapter.class.getName();
 
 
 //    @Override
@@ -39,6 +40,7 @@ public class ChatRoomAdapter extends RecyclerView.Adapter<ChatRoomAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        Log.i(TAG, "onCreateViewholder called");
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_chat, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
@@ -46,6 +48,7 @@ public class ChatRoomAdapter extends RecyclerView.Adapter<ChatRoomAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Log.i(TAG, "onBindViewHolder called");
         holder.username.setText("Name");
         holder.message.setText("Message");
     }
